@@ -1,0 +1,238 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff0f5;
+    color: #4b2e2e;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  #login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .login-box {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 280px;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+    color: #d45d79;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px 15px;
+    border: 2px solid #e8b2c0;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #d45d79;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #b74361;
+  }
+  
+  #app-container {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+  }
+  
+  #quadro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .coluna {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ffeef4;
+    width: 240px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .coluna > div:first-child {
+    margin-bottom: 10px;
+  }
+  
+  .coluna h3 {
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .tarefas {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  }
+  
+  .tarefas div {
+    background-color: #fff;
+    margin-top: 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* texto em cima e botões em baixo */
+    gap: 6px;
+    font-size: 14px;
+    word-break: break-word;
+    max-width: 100%;
+    user-select: none;
+  }
+  
+  .tarefa-texto {
+    cursor: pointer;
+    white-space: normal;
+    overflow-wrap: break-word;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-align: left;
+    font-weight: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    line-height: 1.3;
+  }
+  
+  .tarefa-botoes {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-start; /* alinhado à esquerda */
+    flex-wrap: wrap;
+  }
+  
+  .tarefa-botoes button {
+    font-size: 12px;
+    padding: 3px 7px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    user-select: none;
+  }
+  
+  .tarefa-botoes button:hover {
+    filter: brightness(0.9);
+  }
+  
+  button.excluir-coluna {
+    background-color: #e06666;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+    user-select: none;
+  }
+  
+  button.excluir-coluna:hover {
+    background-color: #b74444;
+  }
+  
+  button.status-andamento {
+    background-color: #fff6d1;
+    border: 1px solid #e6d38a;
+    color: #a0851d;
+  }
+  
+  button.status-finalizada {
+    background-color: #d1ffd8;
+    border: 1px solid #8fd68a;
+    color: #2a7a2a;
+  }
+  
+  button.editar {
+    background-color: #8cc4ff;
+    border: 1px solid #5a9ee6;
+    color: #1e468f;
+  }
+  
+  button.editar:hover {
+    background-color: #5a9ee6;
+    color: white;
+  }
+  
+  input.input-nova-tarefa {
+    flex-grow: 1;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .nova-tarefa-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 6px;
+  }
+  
+  button#btn-add-tarefa {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #d45d79;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button#btn-add-tarefa:hover {
+    background-color: #b74361;
+  }
+  
+  /* Estados das tarefas */
+  
+  .tarefas div.andamento {
+    background-color: #fff6d1; /* amarelo claro */
+    border-left: 5px solid #e6d38a;
+  }
+  
+  .tarefas div.finalizada {
+    background-color: #d1ffd8; /* verde claro */
+    border-left: 5px solid #8fd68a;
+    text-decoration: line-through;
+    color: #555;
+  }
+  
